@@ -52,8 +52,58 @@ def takeCommand():
         return query
     
 
-text=takeCommand()
+#text=takeCommand()
 
-speak(text)
+#speak(text)
+def wish_me():
+    hour=(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        speak("good morning sir.how are you doing")
 
+    elif hour>=12 and hour<18:
+        speak("good afternoon sir.how are you doing")
 
+    else:
+        speak("good evening sir how are you doing")
+
+    speak("i am JARVIS.Tell me sir how can i help you")
+
+if __name__=="__main__":
+
+    wish_me()
+    while True:
+        query=takeCommand().lower()
+        # print(query)
+
+        if "wikipedia" in query:
+            speak("searching wikipedia")
+            query=query.replace('wikipedia',"")
+            print(query)
+            results=wikipedia.summary(query,sentences=2)
+            speak("according to wikipedia")
+            print(results)
+            speak(results)
+
+        elif "youtube" in query:
+            speak("opening youtube")
+            webbrowser.open("youtube.com")
+            
+            
+            
+            
+        elif 'time' in query:
+            strtTime=datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir the time is {strtTime}")
+            
+        elif 'goodbye' in query:
+            speak("ok sir.bye bye")
+            exit()
+            
+            
+            
+       
+
+    
+  
+
+    

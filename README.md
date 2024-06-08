@@ -9,3 +9,6 @@ conda activate assistant
 pip list
 
 pip install -r requirement.txt
+
+
+AIzaSyC-xzimbU3ecm_0Q4Zit6dcPJM7ZOhPjXY
