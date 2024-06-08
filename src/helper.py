@@ -5,7 +5,7 @@ from gtts import gTTS
 
 
 
-GOOGLE_API_KEY="AIzaSyC-xzimbU3ecm_0Q4Zit6dcPJM7ZOhPjXY"
+GOOGLE_API_KEY="****************************"
 
 os.environ['GOOGLE_API_KEY']=GOOGLE_API_KEY
 
